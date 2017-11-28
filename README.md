@@ -100,3 +100,8 @@ gcloud container builds submit --config cloudbuild.yaml .
 
 3. You should now see 2 instances being provisioned in parallel then the `test/no-op.sh` being
 run inside containers based on the `ubuntu:16.04` Docker image.
+
+## Trade-offs
+
+1. Paying for builder + VM
+1. Spin up time of VM increases build time
