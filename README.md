@@ -71,7 +71,7 @@ pre-installed. The build request runs the `test/no-op.sh` script from this direc
 ```shell
 cat > cloudbuild.yaml <<EOF
 steps:
-- name: gcr.io/cloud-solutions-images/remote-builder:v0.3.0
+- name: gcr.io/cloud-solutions-images/remote-builder:v0.3.1
   waitFor: ["-"]
   env:
     # Use Container Optimized OS
@@ -80,7 +80,7 @@ steps:
     - USERNAME=cloud-user
     # Run a script from the local build context in a Docker container
     - COMMAND=docker run -v /home/cloud-user/workspace:/workspace ubuntu:16.04 bash -xe /workspace/test-scripts/no-op.sh
-- name: gcr.io/cloud-solutions-images/remote-builder:v0.3.0
+- name: gcr.io/cloud-solutions-images/remote-builder:v0.3.1
   waitFor: ["-"]
   env:
     # Use Container Optimized OS
