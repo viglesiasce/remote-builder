@@ -92,7 +92,7 @@ steps:
 EOF
 ```
 
-2. Run submit the build with the local context as the workspace. 
+2. Submit the build with the local context as the workspace. 
 
 ```shell
 gcloud container builds submit --config cloudbuild.yaml .
